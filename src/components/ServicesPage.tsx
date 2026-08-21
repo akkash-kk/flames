@@ -14,7 +14,7 @@ interface ServicesPageProps {
 }
 
 export default function ServicesPage({ onNavigate }: ServicesPageProps) {
-  const [activeTab, setActiveTab] = useState<'indoor' | 'outdoor'>('indoor');
+  const [activeTab, setActiveTab] = useState<'indoor' | 'outdoor'>('outdoor');
 
   const filteredServices = EXTENDED_SERVICES.filter(s => s.category === activeTab);
 
@@ -55,6 +55,18 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
         <div className="flex justify-center">
           <div className="bg-[#121212] p-1.5 rounded-2xl inline-flex items-center gap-1 border border-neutral-800">
             <button
+              id="btn-filter-outdoor"
+              onClick={() => setActiveTab('outdoor')}
+              className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
+                activeTab === 'outdoor'
+                  ? 'bg-orange-600 text-white shadow-sm'
+                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40'
+              }`}
+            >
+              <Flame className={`w-3.5 h-3.5 ${activeTab === 'outdoor' ? 'text-white' : 'text-orange-500'}`} />
+              Outdoor Features ({EXTENDED_SERVICES.filter(s => s.category === 'outdoor').length})
+            </button>
+            <button
               id="btn-filter-indoor"
               onClick={() => setActiveTab('indoor')}
               className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
@@ -65,18 +77,6 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
             >
               <Droplets className="w-3.5 h-3.5" />
               Indoor Features ({EXTENDED_SERVICES.filter(s => s.category === 'indoor').length})
-            </button>
-            <button
-              id="btn-filter-outdoor"
-              onClick={() => setActiveTab('outdoor')}
-              className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'outdoor'
-                  ? 'bg-orange-600 text-white shadow-sm'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40'
-              }`}
-            >
-              <Flame className="w-3.5 h-3.5 fill-current text-orange-600" />
-              Outdoor Features ({EXTENDED_SERVICES.filter(s => s.category === 'outdoor').length})
             </button>
           </div>
         </div>

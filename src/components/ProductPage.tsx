@@ -9,7 +9,7 @@ interface ProductPageProps {
   description: string;
   detailedDescription: string;
   imageUrl: string;
-  features: string[];
+  features?: string[];
   benefits: string[];
   howItWorks: string[];
   faqs: { question: string; answer: string }[];

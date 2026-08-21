@@ -28,8 +28,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
     { label: 'Home', value: 'home' },
     { label: 'About Us', value: 'about' },
     { label: 'Products', value: 'services' },
-    { label: 'Portfolio', value: 'portfolio' },
-    { label: 'Why Choose Us', value: 'why-choose' },
+    { label: 'Our Works', value: 'portfolio' },
     { label: 'Blog', value: 'blog' },
   ];
 
