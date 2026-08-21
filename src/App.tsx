@@ -704,7 +704,7 @@ export default function App() {
 
             {/* ──── ROUTE: ABOUT US ──── */}
             {activeSection === 'about' && (
-              <div id="section-about" className="pt-14 md:pt-16 pb-20 px-6 md:px-12">
+              <div id="section-about" className="pt-28 sm:pt-36 pb-20 px-6 md:px-12">
                 <div className="max-w-7xl mx-auto">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
                     <div className="lg:col-span-6 space-y-6">
@@ -843,7 +843,7 @@ export default function App() {
             {/* ──── ROUTE: GENERAL FAQ PAGE ──── */}
             {activeSection === 'faq' && (
               <div id="section-faq" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
-                <div className="max-w-4xl mx-auto pt-8 px-6 md:px-12">
+                <div className="max-w-4xl mx-auto pt-28 sm:pt-36 px-6 md:px-12">
                   <div className="text-center mb-12">
                     <span className="px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
                       Common Questions

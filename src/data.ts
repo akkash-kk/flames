@@ -511,7 +511,7 @@ export const WOOD_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Authentic Wood-Burning Hearths, Fire Pits & Chimeneas for UAE Gardens",
     description: "Timeless crackling wood-burning fire pits and built-in hearths crafted from heavy-gauge corten steel, stainless steel, and refractory firebricks.",
     detailedDescription: "Experience the authentic primal allure, hypnotic aroma, and crackling heat of an authentic wood-burning fire feature. Designed for luxury villa gardens, desert courtyards, and open-air rooftop terraces, our wood fireplace systems combine heavy-duty weather-resistant materials with precision engineered ember control. Available as freestanding chimeneas, circular steel fire bowls, or custom masonry hearth inserts with integrated spark protection screens and ash cleanout pans.",
-    image: "/assets/WOOD FIRE PLACE.jpeg",
+    image: "/assets/Outdoor Fireplace _ Poolside (1).png",
     badge: "AUTHENTIC WOOD FIRE",
     benefits: [
       "Authentic natural wood scent, ambient crackle, and high radiant heat",
@@ -855,7 +855,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Wood Fire Place",
     subtitle: "Traditional Wood-Burning Options",
     description: "Classic wood-fired solutions for outdoor settings and designated hearth areas, with ember control and safety options.",
-    image: "/assets/WOOD FIRE PLACE.jpeg",
+    image: "/assets/Outdoor Fireplace _ Poolside (1).png",
     badge: "WOOD FIRE PLACE",
     category: "outdoor",
     waMessage: "Inquiry regarding Wood Fire Place",

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ArrowLeft, ChevronDown, Flame, Shield, Sparkles, Sliders } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders } from 'lucide-react';
 import { ActiveSection, GasFireplaceVariant } from '../types';
 import { OUTDOOR_GAS_VARIANTS } from '../data';
 
@@ -17,33 +17,13 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
 
   return (
     <div id={`variant-${variant.id}`} className="min-h-screen bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white pb-24">
-      {/* Top Back Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
-        <button
-          onClick={() => onNavigate('outdoor-gas-fireplace')}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-neutral-400 hover:text-orange-400 transition-colors uppercase tracking-wider group cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          Back to Outdoor Gas Fireplace Collection
-        </button>
-      </div>
-
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-6 pb-20 lg:pb-28">
+      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-20 lg:pb-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,146,60,0.16),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_35%)] pointer-events-none" />
         
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-semibold uppercase tracking-wider mb-6"
-              >
-                <Flame className="w-3.5 h-3.5 fill-current" />
-                {variant.badge}
-              </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -80,14 +60,6 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
                   </svg>
                   Get Instant Quote on WhatsApp
                 </a>
-
-                <button
-                  onClick={() => onNavigate('contact')}
-                  className="px-6 py-4 rounded-2xl bg-[#161616] hover:bg-neutral-800 border border-neutral-800 text-neutral-200 font-medium text-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  Book Free Site Survey
-                  <ArrowRight className="w-4 h-4" />
-                </button>
               </motion.div>
             </div>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ArrowLeft, ChevronDown, Flame, Shield, Sparkles, Sliders, MessageCircle, Sparkle } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, MessageCircle, Sparkle } from 'lucide-react';
 import { ActiveSection } from '../types';
 
 interface CustomFireTableProps {
@@ -56,36 +56,13 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
 
   return (
     <div id="custom-fire-table-unit" className="bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white">
-      {/* Top Breadcrumb Navigation */}
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
-        <button
-          onClick={() => {
-            onNavigate('fire-pot-tables');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="inline-flex items-center gap-2 text-xs font-semibold text-neutral-400 hover:text-orange-400 transition-colors uppercase tracking-wider group cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-          Back to Fire Pots & Tables Collection
-        </button>
-      </div>
-
       {/* ──── SECTION 1: HERO SECTION ──── */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,146,60,0.18),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.14),_transparent_35%)] pointer-events-none" />
         <div className="relative">
-          <div className="max-w-7xl mx-auto px-6 md:px-12 py-16 lg:py-24">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 pt-28 sm:pt-36 pb-16 lg:pb-24">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative z-10">
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-300 text-xs font-semibold uppercase tracking-[0.3em] mb-6"
-                >
-                  <Flame className="w-4 h-4 fill-current text-orange-400" />
-                  CUSTOM FIRE TABLES
-                </motion.div>
-
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -130,17 +107,6 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
                     </svg>
                     Book 3D Design on WhatsApp
                   </a>
-
-                  <button
-                    onClick={() => {
-                      onNavigate('contact');
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="px-6 py-4 rounded-3xl bg-[#161616] hover:bg-neutral-800 border border-neutral-700 text-neutral-200 font-semibold text-base transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    Free Site Survey
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
                 </motion.div>
               </div>
 
@@ -387,7 +353,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
               }}
               className="inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 px-8 py-4 text-sm font-semibold text-white transition-all border border-white/20 cursor-pointer"
             >
-              Book Site Survey
+              Contact Our Team
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

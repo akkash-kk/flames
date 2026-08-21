@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Flame, Check, Shield, Sparkles, Sliders, ChevronDown, Droplets, Leaf } from 'lucide-react';
+import { Check, Shield, Sparkles, Sliders, ChevronDown, Droplets, Leaf } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { ETHANOL_VARIANTS } from '../data';
 import ServiceCard from './ServiceCard';
@@ -34,19 +34,10 @@ export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplace
   return (
     <div id="ethanol-fireplace-hub" className="min-h-screen bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white pb-28">
       {/* Hero Header Section */}
-      <section className="relative overflow-hidden pt-12 pb-16 lg:pb-24 border-b border-neutral-800/80">
+      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24 border-b border-neutral-800/80">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.18),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_40%)] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-semibold uppercase tracking-wider mb-6"
-          >
-            <Flame className="w-4 h-4 fill-current" />
-            Bio-Ethanol Fireplace Collection
-          </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
