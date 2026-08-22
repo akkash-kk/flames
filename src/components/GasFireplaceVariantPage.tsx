@@ -53,12 +53,20 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
                   href={`https://wa.me/971542112891?text=${encodeURIComponent(variant.waMessage)}`}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="px-8 py-4 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-semibold flex items-center justify-center gap-3 transition-all shadow-lg shadow-orange-600/25 cursor-pointer text-sm"
+                  className="w-fit sm:min-w-[160px] justify-center px-6 py-3.5 rounded-2xl bg-[#1b1b1b] hover:bg-emerald-950/60 border border-neutral-700 hover:border-emerald-500/50 transition-all duration-300 flex items-center gap-2.5 cursor-pointer text-sm font-semibold text-neutral-100 shadow-lg"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-5 h-5 shrink-0 fill-current">
-                    <path d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-5 h-5 shrink-0">
+                    <defs>
+                      <linearGradient id={`wa-btn-grad-${variant.id}`} x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stopColor="#57d163" />
+                        <stop offset="1" stopColor="#23b33a" />
+                      </linearGradient>
+                    </defs>
+                    <path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
+                    <path fill={`url(#wa-btn-grad-${variant.id})`} d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
+                    <path fill="#fff" fillRule="evenodd" d="M68.016 54.843c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013c.918 1.228 12.718 20.381 31.405 27.75 15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74c1.531-4.293 1.531-7.971 1.072-8.74-.459-.769-1.685-1.226-3.525-2.146s-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647" />
                   </svg>
-                  Get Instant Quote on WhatsApp
+                  WhatsApp
                 </a>
               </motion.div>
             </div>
@@ -93,91 +101,34 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
 
       {/* Specifications & Overview */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="grid lg:grid-cols-[1.3fr_0.9fr] gap-12 items-start">
-          <div className="space-y-8">
-            <div className="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-neutral-800">
-              <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Engineered Architecture</span>
-              <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-white">System Architecture & Overview</h2>
-              <p className="mt-4 text-neutral-300 leading-relaxed text-base sm:text-lg font-light">
-                {variant.detailedDescription}
-              </p>
-            </div>
+        <div className="space-y-8">
+          <div className="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-neutral-800">
+            <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">{variant.badge || 'Engineered Architecture'}</span>
+            <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold text-white">{variant.shortTitle || variant.title}: System Profile & Performance</h2>
+            <p className="mt-4 text-neutral-300 leading-relaxed text-base sm:text-lg font-light max-w-4xl">
+              {variant.detailedDescription}
+            </p>
+          </div>
 
-            {/* Key Features */}
-            {variant.features && variant.features.length > 0 && (
-              <div className="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-neutral-800">
-                <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2.5">
-                  <Sparkles className="w-5 h-5 text-orange-500" />
-                  Key Engineered Capabilities
-                </h3>
-                <div className="grid sm:grid-cols-1 gap-4">
-                  {variant.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-start gap-3.5 p-3.5 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
-                      <span className="mt-0.5 w-5 h-5 rounded-full bg-orange-500/10 text-orange-400 flex items-center justify-center shrink-0">
-                        <Check className="w-3.5 h-3.5" />
-                      </span>
-                      <span className="text-sm sm:text-base text-neutral-200">{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* How It Works */}
+          {/* Key Features */}
+          {variant.features && variant.features.length > 0 && (
             <div className="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-neutral-800">
               <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2.5">
-                <Sliders className="w-5 h-5 text-orange-500" />
-                Operational Workflow
+                <Sparkles className="w-5 h-5 text-orange-500" />
+                Key Engineered Capabilities
               </h3>
-              <div className="space-y-4">
-                {variant.howItWorks.map((step, idx) => (
-                  <div key={idx} className="flex gap-4 items-start">
-                    <div className="w-7 h-7 rounded-full bg-orange-600/20 text-orange-400 border border-orange-500/30 flex items-center justify-center font-bold text-xs shrink-0">
-                      {idx + 1}
-                    </div>
-                    <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">{step}</p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {variant.features.map((feat, idx) => (
+                  <div key={idx} className="flex items-start gap-3.5 p-4 rounded-xl bg-neutral-900/60 border border-neutral-800/80">
+                    <span className="mt-0.5 w-5 h-5 rounded-full bg-orange-500/10 text-orange-400 flex items-center justify-center shrink-0">
+                      <Check className="w-3.5 h-3.5" />
+                    </span>
+                    <span className="text-sm sm:text-base text-neutral-200">{feat}</span>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Sidebar Specs & Consultation */}
-          <div className="space-y-6 lg:sticky lg:top-24">
-            {/* Technical Specs Card */}
-            <div className="bg-[#121212] rounded-3xl p-8 border border-neutral-800">
-              <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2 text-orange-400">
-                <Shield className="w-4 h-4" />
-                Technical Specifications
-              </h3>
-              <div className="divide-y divide-neutral-800">
-                {variant.specs.map((sp, idx) => (
-                  <div key={idx} className="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-sm">
-                    <span className="text-neutral-400 font-medium">{sp.label}</span>
-                    <span className="text-white font-semibold text-right">{sp.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Direct Consultation Box */}
-            <div className="rounded-3xl border border-orange-500/30 bg-gradient-to-b from-neutral-900 to-black p-8 text-white shadow-xl shadow-orange-500/5">
-              <span className="text-xs uppercase tracking-[0.25em] text-orange-400 font-semibold">Bespoke Fabrication</span>
-              <h3 className="mt-3 text-xl font-semibold">Custom Sizing for UAE Projects</h3>
-              <p className="mt-3 text-neutral-300 text-sm leading-relaxed font-light">
-                We custom-fabricate burner trays, drop-in pans, wind glass guards, and decorative fire glass/lava rock beds for residential villas and luxury commercial venues.
-              </p>
-              <a
-                href={`https://wa.me/971542112891?text=${encodeURIComponent(`Hi Flames Fireplace, I need technical drawings and a custom quote for ${variant.title}.`)}`}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-orange-600 hover:bg-orange-500 px-6 py-3.5 text-sm font-semibold text-white transition-all cursor-pointer shadow-md shadow-orange-600/30"
-              >
-                Inquire for CAD & Sizing
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
+          )}
         </div>
       </section>
 

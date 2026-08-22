@@ -88,24 +88,14 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 md:px-12 mt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-8">
-          <div className="bg-[#121212] rounded-3xl border border-neutral-800 p-8 md:p-10 shadow-sm">
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">Why clients choose us</span>
-            <h3 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight mt-4">
-              Fire features with technical support from concept to handover.
-            </h3>
-            <p className="font-sans text-sm text-neutral-300 leading-relaxed mt-4">
-              Whether your brief is a clean indoor flame feature or a full outdoor chef’s kitchen, our team delivers design guidance, installation details, and aftercare support for every project.
-            </p>
-          </div>
-          <div className="bg-neutral-900 rounded-3xl p-8 md:p-10 text-white shadow-sm">
-            <h3 className="font-sans text-xl font-semibold">Need a tailored recommendation?</h3>
-            <p className="font-sans text-sm text-neutral-300 mt-3 leading-relaxed">Tell us about your space, preferred finish, and project scope and we will help you choose the best fireplace or outdoor feature solution.</p>
-            <a href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I%20would%20like%20a%20tailored%20recommendation%20for%20my%20project." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-6 px-5 py-3 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-sans text-sm font-semibold transition cursor-pointer">
-              Start a WhatsApp Consultation
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+        <div className="bg-[#121212] rounded-3xl border border-neutral-800 p-8 md:p-10 shadow-sm">
+          <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">Why clients choose us</span>
+          <h3 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight mt-4">
+            Fire features with technical support from concept to handover.
+          </h3>
+          <p className="font-sans text-sm text-neutral-300 leading-relaxed mt-4 max-w-4xl">
+            Whether your brief is a clean indoor flame feature or a full outdoor chef’s kitchen, our team delivers design guidance, installation details, and aftercare support for every project.
+          </p>
         </div>
       </section>
 

@@ -251,17 +251,18 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
       "Certified UAE safety compliance and whisper-quiet operation"
     ],
     howItWorks: [
-      "Connect low-voltage control wiring to your home automation relay or wall switch.",
-      "System verifies safety interlocks, opens the pilot solenoid, and initiates spark.",
-      "Flame sensor confirms ignition within 3 seconds, illuminating the main burner bed.",
-      "Turn off instantly via app, timer schedule, voice assistant, or wall button."
+      "Initiate ignition seamlessly through your connected Smart Home or BMS interface (Crestron, Lutron, Control4, KNX, Apple HomeKit, or wall switch).",
+      "The low-voltage controller commands the gas safety solenoid to open and sparks the pilot electrode.",
+      "An integrated micro-thermocouple confirms positive flame rectification within 2 seconds, maintaining continuous stable combustion.",
+      "Extinguish safely with one touch from any smart touch panel, automated timer schedule, or smartphone application."
     ],
     specs: [
-      { label: "Control Integration", value: "Crestron / Lutron / Control4 / KNX / Dry Contact" },
-      { label: "Ignition Type", value: "Electronic Hot Surface / Direct Spark Ignition" },
-      { label: "Fuel Compatibility", value: "LPG (Propane) or Centralized Natural Gas (NG)" },
-      { label: "Material", value: "Marine-Grade 316 Stainless Steel Burner Tray" },
-      { label: "Safety System", value: "Continuous Flame Rectification & Auto Shut-off" }
+      { label: "BMS / Smart Integration", value: "Crestron, Lutron, Control4, KNX, Savant & Dry Contact Relays" },
+      { label: "Ignition Technology", value: "Direct Electronic Spark / Hot Surface Pilot with Micro-Sensor" },
+      { label: "Gas Type Compatibility", value: "Bottled LPG Propane (5kg/11kg/45kg) or Centralized Natural Gas (NG)" },
+      { label: "Burner Tray Construction", value: "Marine-Grade 316 Stainless Steel with Laser-Cut Orifices" },
+      { label: "Safety System", value: "Continuous Flame Rectification Thermocouple & Emergency Auto-Cutoff" },
+      { label: "Compliance & Safety", value: "CE Certified & Dubai Civil Defense (DCD) Safety Standards" }
     ],
     faqs: [
       { question: "Can this fireplace connect to my existing Control4 or Crestron system?", answer: "Yes. Our automated gas fireplace uses standard low-voltage dry contact relays, making it seamlessly compatible with Control4, Crestron, Lutron, KNX, Savant, and home automation systems." },
@@ -289,16 +290,18 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
       "Premium lava rock or reflective fire glass media compatibility"
     ],
     howItWorks: [
-      "Ignite the fireplace using the electronic ignition module.",
-      "Toggle between High and Low flame settings using the remote or control module.",
-      "The motorized servo-valve modulates the gas orifice pressure smoothly without flame pop."
+      "Press the ignition button on your multi-level handheld remote or smart wall control module to engage the electronic spark sequence.",
+      "Integrated flame thermocouple verifies positive ignition within 2 seconds and opens the primary gas safety solenoid.",
+      "Toggle effortlessly between High Flame (maximum visual impact and deep radiant warmth) and Low Flame (ambient intimate glow with optimal fuel efficiency).",
+      "Precision motorized servo-valve modulates internal manifold pressure smoothly with zero popping noise, zero soot, and complete wind-stable combustion."
     ],
     specs: [
-      { label: "Flame Adjustment", value: "Dual-Stage High / Low Modulation" },
-      { label: "Gas Savings", value: "Up to 45% reduction in Low mode" },
-      { label: "Fuel Compatibility", value: "LPG (Propane) or Centralized Natural Gas" },
-      { label: "Burner Construction", value: "Laser-cut 304/316 Stainless Steel" },
-      { label: "Controller", value: "Handheld Multi-Level Remote & Wall Module" }
+      { label: "Flame Modulation", value: "Dual-Stage High / Low Modulation (45,000 – 110,000 BTU/hr)" },
+      { label: "Fuel Efficiency", value: "Eco-Mode with up to 45% gas consumption reduction on Low" },
+      { label: "Gas Compatibility", value: "Bottled LPG Propane (5kg/11kg) or Municipal Natural Gas (NG)" },
+      { label: "Burner Material", value: "Marine-Grade 316 / 304 Laser-Cut Stainless Steel Tray" },
+      { label: "Control System", value: "Ergonomic Handheld RF Multi-Stage Remote & Wall Switch" },
+      { label: "Safety & Compliance", value: "Flame Failure Safety Shut-off & UAE Civil Defense Certified" }
     ],
     faqs: [
       { question: "How much gas does the Low flame setting save?", answer: "The Low flame mode reduces gas flow by approximately 40% to 45%, offering extended burn time while providing a soft decorative glow." },
@@ -326,16 +329,18 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
       "Compatible with fire pits, linear burners, and custom fire tables"
     ],
     howItWorks: [
-      "Press the ON button on the wireless handheld remote control.",
-      "The receiver triggers the pilot spark and opens the solenoid valve.",
-      "Enjoy instant, smoke-free outdoor fire feature ambiance in seconds."
+      "Press the wireless power button on the encrypted RF handheld remote from up to 30 meters away.",
+      "The receiver triggers the high-voltage spark electrode and commands the gas solenoid to open.",
+      "Continuous flame-sensing safety rod confirms stable combustion across the burner bed within 3 seconds.",
+      "Extinguish effortlessly with one-touch button press; safety interlock prevents accidental reactivation."
     ],
     specs: [
-      { label: "Remote Range", value: "Up to 30 meters (RF 433MHz)" },
-      { label: "Safety Features", value: "Child Lock, Sleep Timer, Flame Rectification" },
-      { label: "Power Source", value: "Battery-Operated (4x AA) or 220V Mains Adapter" },
-      { label: "Weather Protection", value: "IP65 Sealed Control Enclosure" },
-      { label: "Fuel Type", value: "LPG / Natural Gas" }
+      { label: "Wireless Control Range", value: "Up to 30 meters (Encrypted 433MHz RF Signal)" },
+      { label: "Ignition Architecture", value: "Battery-Powered Spark Module (4x AA) or 220V Mains Adapter" },
+      { label: "Burner Output Capacity", value: "45,000 – 120,000 BTU/hr (Linear & Circular Sizing)" },
+      { label: "Burner Material", value: "Marine-Grade 316 / 304 Heavy Stainless Steel" },
+      { label: "Safety Protections", value: "Child-Lock Feature, Auto Sleep Timer & Flame Failure Sensor" },
+      { label: "Gas Type", value: "Composite LPG Bottles (Propane) or Municipal Natural Gas" }
     ],
     faqs: [
       { question: "Does the remote require direct line of sight?", answer: "No. The system uses radio-frequency (RF) technology which passes through glass patio doors and outdoor furniture up to 30 meters away." },
@@ -363,16 +368,18 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
       "Cost-effective installation with zero electrician required"
     ],
     howItWorks: [
-      "Push the dial in firmly to unlock the safety gas mechanism.",
-      "Turn the knob counter-clockwise to trigger the rapid piezo spark.",
-      "Hold for 5 seconds to heat the safety thermocouple, then adjust flame height."
+      "Depress the safety control knob firmly to disengage the mechanical child-safety lock and open the gas valve.",
+      "Rotate the knob counter-clockwise to actuate the rapid battery-assisted piezo spark ignition sequence.",
+      "Maintain pressure for 5 seconds to allow the safety thermocouple sensor to heat to operating temperature.",
+      "Release and rotate dial freely to adjust flame height from subtle ambient glow to roaring heat."
     ],
     specs: [
-      { label: "Ignition Mechanism", value: "Battery-Powered Electronic Piezo Spark" },
-      { label: "Safety Lock", value: "Mechanical Push-In Interlock Valve" },
-      { label: "Wiring Requirement", value: "None (100% Self-Contained 1x AA Battery)" },
-      { label: "Faceplate Material", value: "Brushed 304 Stainless Steel" },
-      { label: "Flame Regulation", value: "Continuous Variable Rotary Dial" }
+      { label: "Ignition Mechanism", value: "Battery-Assisted Rapid Piezo Pulse Spark (1x AA Battery)" },
+      { label: "Safety Interlock", value: "Push-to-Turn Mechanical Safety Valve with Thermocouple" },
+      { label: "Wiring Requirement", value: "100% Wire-Free (Zero electrical conduits or trenching)" },
+      { label: "Faceplate & Bezel", value: "Heavy-Gauge Brushed 304 Stainless Steel" },
+      { label: "Flame Regulation", value: "Continuous Variable Rotary Dial (40,000 – 90,000 BTU/hr)" },
+      { label: "Fuel Type", value: "Standard LPG Propane Bottles or Centralized Natural Gas" }
     ],
     faqs: [
       { question: "Does this require an electrical outlet or wiring?", answer: "No. The Push & Turn system operates completely on a single standard AA battery for the sparker, requiring zero electrical connection." },
@@ -400,17 +407,17 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
       "Seamless flush architectural mounting in stone, concrete, or wood veneer"
     ],
     howItWorks: [
-      "Hold a long lighter or match over the burner media.",
-      "Insert the key into the escutcheon flange and turn counter-clockwise.",
-      "Gas flows instantly and ignites over the lava rock or fire glass bed.",
-      "Adjust flame height with key rotation, or turn clockwise to shut off completely."
+      "Place an extended fireplace lighter wand over the fire media bed.",
+      "Insert the solid brass safety key into the flush-mounted escutcheon valve flange.",
+      "Rotate the key counter-clockwise a quarter turn to release gas flow for instant ignition.",
+      "Fine-tune flame height by rotating the key, or turn clockwise to achieve 100% mechanical gas shutoff."
     ],
     specs: [
-      { label: "Valve Material", value: "Forged Solid Brass Ball Valve" },
-      { label: "Key Finish", value: "Polished Chrome / Antique Brass / Matte Black" },
-      { label: "Capacity", value: "Up to 300,000+ BTU/hr (High Flow)" },
-      { label: "Flange Size", value: "Standard 1/2\" or 3/4\" NPT inlet/outlet" },
-      { label: "Durability", value: "Weatherproof, Rust-proof, Zero Electronics" }
+      { label: "Valve Construction", value: "Heavy-Duty Forged Solid Brass 1/4-Turn Ball Valve" },
+      { label: "Key & Flange Finish", value: "Polished Chrome, Antique Brass, or Matte Black" },
+      { label: "BTU Flow Capacity", value: "High-Flow Commercial Grade up to 300,000+ BTU/hr" },
+      { label: "Pipe Connections", value: "Standard 1/2\" or 3/4\" NPT Female Threaded Inlets" },
+      { label: "Durability Rating", value: "100% Weatherproof, Rustproof & Sandstorm Impervious (Zero Electronics)" }
     ],
     faqs: [
       { question: "Why choose a Key Valve system over electronic controls?", answer: "Key Valves offer absolute mechanical reliability with zero electronics to fail, zero battery replacements, and tamper-proof security since the fire cannot be turned on without the key." },
@@ -842,7 +849,7 @@ export const SERVICES: ServiceItem[] = [
     description: "Clean-burning manual and automated bio-ethanol fireplace systems engineered for smoke-free elegance in indoor and sheltered outdoor spaces.",
     image: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
     badge: "ETHANOL FIRE PLACE",
-    category: "outdoor",
+    category: "indoor",
     waMessage: "Inquiry regarding Ethanol Fire Place",
     seoTitle: "Ethanol Fire Place Dubai | Flames Fireplace",
     seoDescription: "Manual and automated ethanol fireplaces for indoor and sheltered outdoor settings — clean burning and flexible styling.",
